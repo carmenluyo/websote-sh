@@ -1,0 +1,134 @@
+@import '_includes/_vars';
+@import '_includes/_mixins';
+@import '../../node_modules/flexboxgrid/css/flexboxgrid.min.css';
+
+html,
+body {
+    margin: 0;
+}
+
+#accordion {
+	visibility: hidden;
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	.top {
+		>a {
+			padding-left: 16px;
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
+		>div {
+			padding-left: 16px;
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
+	}
+
+	li {
+		li {
+			
+			a {
+				padding-left: 30px;
+				padding-top: 8px;
+				padding-bottom: 8px;
+			}
+			
+			div {
+				padding-left: 30px;
+				padding-top: 8px;
+				padding-bottom: 8px;
+			}
+
+			li {
+				a {
+					padding-left: 50px;
+				}
+				
+				div {
+					padding-left: 50px;
+				}
+			}
+
+			.caret {
+				margin-right: 6px;
+				float: none;
+				display: inline-block;
+				margin-top: auto;
+				margin-bottom: 4px;
+			}
+		}
+		>div {
+			font-family: 'Lucida Grande', Geneva, sans-serif;
+			font-weight: bold;
+			font-size: large;
+			color: #999;
+		}
+		font-family: Arial, sans-serif;
+		font-size: 13px;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+		cursor: pointer;
+		-ms-user-select: none;
+		-mos-user-select: none;
+		-webkit-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+	}
+
+	.active {
+		
+		div {
+			color: #999;
+		}
+	}
+
+	a {
+		color: #999;
+		font-weight: normal;
+		font-size: 13px;
+		text-decoration: none;
+		display: block;
+		line-height: 1;
+		transition: all 0.3s;
+		&:hover {
+			color: #ccc;
+		}
+
+		&.active {
+			color: #ddd;
+			background-color: rgba(255,255,255,0.15);
+			font-weight: bold;
+		}
+	}
+
+
+	.caret {
+		color: inherit;
+		float: right;
+		margin-top: 8px;
+		margin-right: 16px;
+		width: 0;
+		height: 0;
+		overflow: hidden;
+		border-style: solid;
+		border-width: 6px;
+		position: relative;
+		border-top: 6px solid initial;
+		border-bottom-width: 0px;
+		border-left-color: transparent;
+		border-right-color: transparent;
+
+		&.active {
+			margin-bottom: 4px;
+			border-bottom-width: 6px;
+			border-bottom-color: initial;
+			border-top: none;
+		}
+	}
+}
