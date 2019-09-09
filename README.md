@@ -15,13 +15,13 @@
 ### Install
 
 ```bash
-npm install -g Shopstar-nuevo-menu
+npm install 
 ```
 
 ### Use 
 
 ```bash
-yo Shopstar-nuevo-menu
+gulp
 ```
 
 # Author 
