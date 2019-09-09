@@ -1,32 +1,24 @@
-div(style='width:950px;margin: 0;')
-  div(style='float:left;')
-    .float-panel(style='width:300px;font-size:14px;background:#111;')
-      #accordion(style='visibility: visible;')
-        ul
-          li.top.has-sub
-            div #[.caret] Sollicitudin
-            ul(style='transition: all 200ms ease 0s; height: 0px; padding-bottom: 0px; padding-top: 0px; margin-bottom: 0px; margin-top: 0px; display: none;')
-              li
-                a(href='?11') Lorem ipsum
-              li
-                a(href='?12') Dolor sit
+#menu-wrapper
+    #hamburger-menu
+        span
+        span
+        span
 
-          li.top.has-sub
-            div #[.caret] Quis Porttitor
-            ul(style='transition: all 200ms ease 0s; display: none; padding-bottom: 0px; padding-top: 0px; margin-bottom: 0px; margin-top: 0px; height: 0px;')
-              li
-                a(href='?21') Finibus Bonorum
-              li
-                a(href='?22') Sed ut
-              li
-                a(href='?23') Neque porro
+ul#accordion.accordion
+    include ../_components/_mixin
 
-          li.top.has-sub
-            div #[.caret] Odio Ac
-            ul(style='transition: all 200ms ease 0s; display: none; padding-bottom: 0px; padding-top: 0px; margin-bottom: 0px; margin-top: 0px; height: 0px;')
-              li
-                a(href='?31') Minima veniam
-              li
-                a(href='?32') Voluptate velit
+    li
+        +shopstar_accordion("Tecnología")
+        ul.submenu
+            +list('#', "Javascript")
+            +list('#', "jQuery")
+            +list('#', "Frameworks javascript")
 
-  div(style='clear:both;')
+
+    li
+        +shopstar_accordion("Desarrollo front-end")
+        ul.submenu
+            +list('#', "Tablets")
+            +list('#', "Dispositivos mobiles")
+            +list('#', "Medios de escritorio")
+            +list('#', "Otros dispositivos")
